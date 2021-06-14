@@ -1,0 +1,8 @@
+./Parser.fs
+./Parser.fsi
+./Lexer.fs
+./Parser.fsyacc.output
+bin/
+obj/
+.git/
+.DS_Store

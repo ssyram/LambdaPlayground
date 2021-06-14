@@ -1,0 +1,1692 @@
+        Output file describing compiled parser placed in Parser.fs and Parser.fsi
+------------------------
+states = 
+state 0:  items:    _startlet_line ->  . let_line
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   shift 18
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto let_line: 1
+    goto let_binding: 10
+state 1:  items:    _startlet_line -> let_line . 
+  actions:    action 'LAMBDA' (noprec):   accept
+    action 'DOT' (noprec):   accept
+    action 'LPAREN' (noprec):   accept
+    action 'RPAREN' (noprec):   accept
+    action 'NEWLINE' (noprec):   accept
+    action 'LET' (noprec):   accept
+    action 'EOF' (noprec):   accept
+    action 'LANGLE' (noprec):   accept
+    action 'RANGLE' (noprec):   accept
+    action 'PAR' (noprec):   accept
+    action 'SEMICOLON' (noprec):   accept
+    action 'COMMAND_SYM' (noprec):   accept
+    action 'MID' (noprec):   accept
+    action 'ERROR' (noprec):   accept
+    action 'NEW' (noprec):   accept
+    action 'ASSIGN' (noprec):   accept
+    action 'NUM' (noprec):   accept
+    action 'OP' (noprec):   accept
+    action 'ID' (noprec):   accept
+    action 'error' (noprec):   accept
+    action '#' (noprec):   accept
+    action '$$' (noprec):   accept
+  immediate action:   accept  gotos:state 2:  items:    _startpi_line ->  . pi_line
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto pi_line: 3
+    goto pi_term: 8
+    goto non_par_pi_term: 48
+state 3:  items:    _startpi_line -> pi_line . 
+  actions:    action 'LAMBDA' (noprec):   accept
+    action 'DOT' (noprec):   accept
+    action 'LPAREN' (noprec):   accept
+    action 'RPAREN' (noprec):   accept
+    action 'NEWLINE' (noprec):   accept
+    action 'LET' (noprec):   accept
+    action 'EOF' (noprec):   accept
+    action 'LANGLE' (noprec):   accept
+    action 'RANGLE' (noprec):   accept
+    action 'PAR' (noprec):   accept
+    action 'SEMICOLON' (noprec):   accept
+    action 'COMMAND_SYM' (noprec):   accept
+    action 'MID' (noprec):   accept
+    action 'ERROR' (noprec):   accept
+    action 'NEW' (noprec):   accept
+    action 'ASSIGN' (noprec):   accept
+    action 'NUM' (noprec):   accept
+    action 'OP' (noprec):   accept
+    action 'ID' (noprec):   accept
+    action 'error' (noprec):   accept
+    action '#' (noprec):   accept
+    action '$$' (noprec):   accept
+  immediate action:   accept  gotos:state 4:  items:    _startlambda_line ->  . lambda_line
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto lambda_line: 5
+    goto lambda_term: 6
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 5:  items:    _startlambda_line -> lambda_line . 
+  actions:    action 'LAMBDA' (noprec):   accept
+    action 'DOT' (noprec):   accept
+    action 'LPAREN' (noprec):   accept
+    action 'RPAREN' (noprec):   accept
+    action 'NEWLINE' (noprec):   accept
+    action 'LET' (noprec):   accept
+    action 'EOF' (noprec):   accept
+    action 'LANGLE' (noprec):   accept
+    action 'RANGLE' (noprec):   accept
+    action 'PAR' (noprec):   accept
+    action 'SEMICOLON' (noprec):   accept
+    action 'COMMAND_SYM' (noprec):   accept
+    action 'MID' (noprec):   accept
+    action 'ERROR' (noprec):   accept
+    action 'NEW' (noprec):   accept
+    action 'ASSIGN' (noprec):   accept
+    action 'NUM' (noprec):   accept
+    action 'OP' (noprec):   accept
+    action 'ID' (noprec):   accept
+    action 'error' (noprec):   accept
+    action '#' (noprec):   accept
+    action '$$' (noprec):   accept
+  immediate action:   accept  gotos:state 6:  items:    lambda_line -> lambda_term . 'EOF'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   shift 7
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 7:  items:    lambda_line -> lambda_term 'EOF' . 
+  actions:    action 'LAMBDA' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'DOT' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'LPAREN' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'RPAREN' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'NEWLINE' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'LET' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'EOF' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'LANGLE' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'RANGLE' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'PAR' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'SEMICOLON' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'COMMAND_SYM' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'MID' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'ERROR' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'NEW' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'ASSIGN' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'NUM' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'OP' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'ID' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action 'error' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action '#' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+    action '$$' (noprec):   reduce lambda_line --> lambda_term 'EOF'
+  immediate action:   reduce lambda_line --> lambda_term 'EOF'  gotos:state 8:  items:    pi_line -> pi_term . 'EOF'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   shift 9
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 9:  items:    pi_line -> pi_term 'EOF' . 
+  actions:    action 'LAMBDA' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'DOT' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'LPAREN' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'RPAREN' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'NEWLINE' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'LET' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'EOF' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'LANGLE' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'RANGLE' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'PAR' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'SEMICOLON' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'COMMAND_SYM' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'MID' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'ERROR' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'NEW' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'ASSIGN' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'NUM' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'OP' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'ID' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action 'error' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action '#' (noprec):   reduce pi_line --> pi_term 'EOF'
+    action '$$' (noprec):   reduce pi_line --> pi_term 'EOF'
+  immediate action:   reduce pi_line --> pi_term 'EOF'  gotos:state 10:  items:    let_line -> let_binding . 'EOF'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   shift 11
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 11:  items:    let_line -> let_binding 'EOF' . 
+  actions:    action 'LAMBDA' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'DOT' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'LPAREN' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'RPAREN' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'NEWLINE' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'LET' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'EOF' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'LANGLE' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'RANGLE' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'PAR' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'SEMICOLON' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'COMMAND_SYM' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'MID' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'ERROR' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'NEW' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'ASSIGN' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'NUM' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'OP' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'ID' (noprec):   reduce let_line --> let_binding 'EOF'
+    action 'error' (noprec):   reduce let_line --> let_binding 'EOF'
+    action '#' (noprec):   reduce let_line --> let_binding 'EOF'
+    action '$$' (noprec):   reduce let_line --> let_binding 'EOF'
+  immediate action:   reduce let_line --> let_binding 'EOF'  gotos:state 12:  items:    op -> 'OP' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'OP'
+    action 'DOT' (noprec):   reduce op --> 'OP'
+    action 'LPAREN' (noprec):   reduce op --> 'OP'
+    action 'RPAREN' (noprec):   reduce op --> 'OP'
+    action 'NEWLINE' (noprec):   reduce op --> 'OP'
+    action 'LET' (noprec):   reduce op --> 'OP'
+    action 'EOF' (noprec):   reduce op --> 'OP'
+    action 'LANGLE' (noprec):   reduce op --> 'OP'
+    action 'RANGLE' (noprec):   reduce op --> 'OP'
+    action 'PAR' (noprec):   reduce op --> 'OP'
+    action 'SEMICOLON' (noprec):   reduce op --> 'OP'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'OP'
+    action 'MID' (noprec):   reduce op --> 'OP'
+    action 'ERROR' (noprec):   reduce op --> 'OP'
+    action 'NEW' (noprec):   reduce op --> 'OP'
+    action 'ASSIGN' (noprec):   reduce op --> 'OP'
+    action 'NUM' (noprec):   reduce op --> 'OP'
+    action 'OP' (noprec):   reduce op --> 'OP'
+    action 'ID' (noprec):   reduce op --> 'OP'
+    action 'error' (noprec):   reduce op --> 'OP'
+    action '#' (noprec):   reduce op --> 'OP'
+    action '$$' (noprec):   reduce op --> 'OP'
+  immediate action:   reduce op --> 'OP'  gotos:state 13:  items:    op -> 'PAR' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'PAR'
+    action 'DOT' (noprec):   reduce op --> 'PAR'
+    action 'LPAREN' (noprec):   reduce op --> 'PAR'
+    action 'RPAREN' (noprec):   reduce op --> 'PAR'
+    action 'NEWLINE' (noprec):   reduce op --> 'PAR'
+    action 'LET' (noprec):   reduce op --> 'PAR'
+    action 'EOF' (noprec):   reduce op --> 'PAR'
+    action 'LANGLE' (noprec):   reduce op --> 'PAR'
+    action 'RANGLE' (noprec):   reduce op --> 'PAR'
+    action 'PAR' (noprec):   reduce op --> 'PAR'
+    action 'SEMICOLON' (noprec):   reduce op --> 'PAR'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'PAR'
+    action 'MID' (noprec):   reduce op --> 'PAR'
+    action 'ERROR' (noprec):   reduce op --> 'PAR'
+    action 'NEW' (noprec):   reduce op --> 'PAR'
+    action 'ASSIGN' (noprec):   reduce op --> 'PAR'
+    action 'NUM' (noprec):   reduce op --> 'PAR'
+    action 'OP' (noprec):   reduce op --> 'PAR'
+    action 'ID' (noprec):   reduce op --> 'PAR'
+    action 'error' (noprec):   reduce op --> 'PAR'
+    action '#' (noprec):   reduce op --> 'PAR'
+    action '$$' (noprec):   reduce op --> 'PAR'
+  immediate action:   reduce op --> 'PAR'  gotos:state 14:  items:    op -> 'COMMAND_SYM' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'DOT' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'LPAREN' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'RPAREN' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'NEWLINE' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'LET' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'EOF' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'LANGLE' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'RANGLE' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'PAR' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'SEMICOLON' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'MID' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'ERROR' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'NEW' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'ASSIGN' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'NUM' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'OP' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'ID' (noprec):   reduce op --> 'COMMAND_SYM'
+    action 'error' (noprec):   reduce op --> 'COMMAND_SYM'
+    action '#' (noprec):   reduce op --> 'COMMAND_SYM'
+    action '$$' (noprec):   reduce op --> 'COMMAND_SYM'
+  immediate action:   reduce op --> 'COMMAND_SYM'  gotos:state 15:  items:    op -> 'ASSIGN' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'ASSIGN'
+    action 'DOT' (noprec):   reduce op --> 'ASSIGN'
+    action 'LPAREN' (noprec):   reduce op --> 'ASSIGN'
+    action 'RPAREN' (noprec):   reduce op --> 'ASSIGN'
+    action 'NEWLINE' (noprec):   reduce op --> 'ASSIGN'
+    action 'LET' (noprec):   reduce op --> 'ASSIGN'
+    action 'EOF' (noprec):   reduce op --> 'ASSIGN'
+    action 'LANGLE' (noprec):   reduce op --> 'ASSIGN'
+    action 'RANGLE' (noprec):   reduce op --> 'ASSIGN'
+    action 'PAR' (noprec):   reduce op --> 'ASSIGN'
+    action 'SEMICOLON' (noprec):   reduce op --> 'ASSIGN'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'ASSIGN'
+    action 'MID' (noprec):   reduce op --> 'ASSIGN'
+    action 'ERROR' (noprec):   reduce op --> 'ASSIGN'
+    action 'NEW' (noprec):   reduce op --> 'ASSIGN'
+    action 'ASSIGN' (noprec):   reduce op --> 'ASSIGN'
+    action 'NUM' (noprec):   reduce op --> 'ASSIGN'
+    action 'OP' (noprec):   reduce op --> 'ASSIGN'
+    action 'ID' (noprec):   reduce op --> 'ASSIGN'
+    action 'error' (noprec):   reduce op --> 'ASSIGN'
+    action '#' (noprec):   reduce op --> 'ASSIGN'
+    action '$$' (noprec):   reduce op --> 'ASSIGN'
+  immediate action:   reduce op --> 'ASSIGN'  gotos:state 16:  items:    op -> 'LANGLE' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'LANGLE'
+    action 'DOT' (noprec):   reduce op --> 'LANGLE'
+    action 'LPAREN' (noprec):   reduce op --> 'LANGLE'
+    action 'RPAREN' (noprec):   reduce op --> 'LANGLE'
+    action 'NEWLINE' (noprec):   reduce op --> 'LANGLE'
+    action 'LET' (noprec):   reduce op --> 'LANGLE'
+    action 'EOF' (noprec):   reduce op --> 'LANGLE'
+    action 'LANGLE' (noprec):   reduce op --> 'LANGLE'
+    action 'RANGLE' (noprec):   reduce op --> 'LANGLE'
+    action 'PAR' (noprec):   reduce op --> 'LANGLE'
+    action 'SEMICOLON' (noprec):   reduce op --> 'LANGLE'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'LANGLE'
+    action 'MID' (noprec):   reduce op --> 'LANGLE'
+    action 'ERROR' (noprec):   reduce op --> 'LANGLE'
+    action 'NEW' (noprec):   reduce op --> 'LANGLE'
+    action 'ASSIGN' (noprec):   reduce op --> 'LANGLE'
+    action 'NUM' (noprec):   reduce op --> 'LANGLE'
+    action 'OP' (noprec):   reduce op --> 'LANGLE'
+    action 'ID' (noprec):   reduce op --> 'LANGLE'
+    action 'error' (noprec):   reduce op --> 'LANGLE'
+    action '#' (noprec):   reduce op --> 'LANGLE'
+    action '$$' (noprec):   reduce op --> 'LANGLE'
+  immediate action:   reduce op --> 'LANGLE'  gotos:state 17:  items:    op -> 'RANGLE' . 
+  actions:    action 'LAMBDA' (noprec):   reduce op --> 'RANGLE'
+    action 'DOT' (noprec):   reduce op --> 'RANGLE'
+    action 'LPAREN' (noprec):   reduce op --> 'RANGLE'
+    action 'RPAREN' (noprec):   reduce op --> 'RANGLE'
+    action 'NEWLINE' (noprec):   reduce op --> 'RANGLE'
+    action 'LET' (noprec):   reduce op --> 'RANGLE'
+    action 'EOF' (noprec):   reduce op --> 'RANGLE'
+    action 'LANGLE' (noprec):   reduce op --> 'RANGLE'
+    action 'RANGLE' (noprec):   reduce op --> 'RANGLE'
+    action 'PAR' (noprec):   reduce op --> 'RANGLE'
+    action 'SEMICOLON' (noprec):   reduce op --> 'RANGLE'
+    action 'COMMAND_SYM' (noprec):   reduce op --> 'RANGLE'
+    action 'MID' (noprec):   reduce op --> 'RANGLE'
+    action 'ERROR' (noprec):   reduce op --> 'RANGLE'
+    action 'NEW' (noprec):   reduce op --> 'RANGLE'
+    action 'ASSIGN' (noprec):   reduce op --> 'RANGLE'
+    action 'NUM' (noprec):   reduce op --> 'RANGLE'
+    action 'OP' (noprec):   reduce op --> 'RANGLE'
+    action 'ID' (noprec):   reduce op --> 'RANGLE'
+    action 'error' (noprec):   reduce op --> 'RANGLE'
+    action '#' (noprec):   reduce op --> 'RANGLE'
+    action '$$' (noprec):   reduce op --> 'RANGLE'
+  immediate action:   reduce op --> 'RANGLE'  gotos:state 18:  items:    let_binding -> 'LET' . 'ID' 'ASSIGN' lambda_term
+    let_binding -> 'LET' . 'NUM' 'ASSIGN' lambda_term
+    let_binding -> 'LET' . 'MID' 'OP' 'ASSIGN' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   shift 25
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 22
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 19
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 19:  items:    let_binding -> 'LET' 'ID' . 'ASSIGN' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   shift 20
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 20:  items:    let_binding -> 'LET' 'ID' 'ASSIGN' . lambda_term
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto lambda_term: 21
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 21:  items:    let_binding -> 'LET' 'ID' 'ASSIGN' lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'DOT' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'LPAREN' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'RPAREN' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'NEWLINE' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'LET' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'EOF' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'LANGLE' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'RANGLE' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'PAR' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'SEMICOLON' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'MID' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'ERROR' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'NEW' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'ASSIGN' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'NUM' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'OP' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'ID' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action 'error' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action '#' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+    action '$$' (noprec):   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term
+  immediate action:   reduce let_binding --> 'LET' 'ID' 'ASSIGN' lambda_term  gotos:state 22:  items:    let_binding -> 'LET' 'NUM' . 'ASSIGN' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   shift 23
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 23:  items:    let_binding -> 'LET' 'NUM' 'ASSIGN' . lambda_term
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto lambda_term: 24
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 24:  items:    let_binding -> 'LET' 'NUM' 'ASSIGN' lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'DOT' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'LPAREN' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'RPAREN' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'NEWLINE' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'LET' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'EOF' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'LANGLE' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'RANGLE' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'PAR' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'SEMICOLON' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'MID' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'ERROR' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'NEW' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'ASSIGN' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'NUM' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'OP' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'ID' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action 'error' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action '#' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+    action '$$' (noprec):   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term
+  immediate action:   reduce let_binding --> 'LET' 'NUM' 'ASSIGN' lambda_term  gotos:state 25:  items:    let_binding -> 'LET' 'MID' . 'OP' 'ASSIGN' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   shift 26
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 26:  items:    let_binding -> 'LET' 'MID' 'OP' . 'ASSIGN' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   shift 27
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 27:  items:    let_binding -> 'LET' 'MID' 'OP' 'ASSIGN' . lambda_term
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto lambda_term: 28
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 28:  items:    let_binding -> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'DOT' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'LPAREN' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'RPAREN' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'NEWLINE' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'LET' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'EOF' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'LANGLE' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'RANGLE' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'PAR' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'SEMICOLON' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'MID' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'ERROR' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'NEW' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'ASSIGN' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'NUM' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'OP' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'ID' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action 'error' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action '#' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+    action '$$' (noprec):   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term
+  immediate action:   reduce let_binding --> 'LET' 'MID' 'OP' 'ASSIGN' lambda_term  gotos:state 29:  items:    lambda_term -> 'LAMBDA' . id_list 'DOT' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 37
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto id_list: 30
+state 30:  items:    lambda_term -> 'LAMBDA' id_list . 'DOT' lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   shift 31
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 31:  items:    lambda_term -> 'LAMBDA' id_list 'DOT' . lambda_term
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto lambda_term: 32
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 32:  items:    lambda_term -> 'LAMBDA' id_list 'DOT' lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'DOT' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'LPAREN' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'RPAREN' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'NEWLINE' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'LET' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'EOF' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'LANGLE' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'RANGLE' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'PAR' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'SEMICOLON' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'MID' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'ERROR' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'NEW' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'ASSIGN' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'NUM' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'OP' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'ID' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action 'error' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action '#' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+    action '$$' (noprec):   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term
+  immediate action:   reduce lambda_term --> 'LAMBDA' id_list 'DOT' lambda_term  gotos:state 33:  items:    lambda_term -> body_lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'DOT' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'LPAREN' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'RPAREN' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'NEWLINE' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'LET' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'EOF' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'LANGLE' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'RANGLE' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'PAR' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'SEMICOLON' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'MID' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'ERROR' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'NEW' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'ASSIGN' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'NUM' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'OP' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'ID' (noprec):   reduce lambda_term --> body_lambda_term
+    action 'error' (noprec):   reduce lambda_term --> body_lambda_term
+    action '#' (noprec):   reduce lambda_term --> body_lambda_term
+    action '$$' (noprec):   reduce lambda_term --> body_lambda_term
+  immediate action:   reduce lambda_term --> body_lambda_term  gotos:state 34:  items:    body_lambda_term -> non_infix_lambda_term . op body_lambda_term
+    body_lambda_term -> non_infix_lambda_term . 
+    non_infix_lambda_term -> non_infix_lambda_term . non_app_lambda_term
+  actions:    action 'LAMBDA' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'DOT' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'NEWLINE' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'LET' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'EOF' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'LANGLE' (noprec):   shift 16
+    action 'RANGLE' (noprec):   shift 17
+    action 'PAR' (noprec):   shift 13
+    action 'SEMICOLON' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'COMMAND_SYM' (noprec):   shift 14
+    action 'MID' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'ERROR' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'NEW' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action 'ASSIGN' (noprec):   shift 15
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   shift 12
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action '#' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+    action '$$' (noprec):   reduce body_lambda_term --> non_infix_lambda_term
+  immediate action: <none>  gotos:    goto op: 35
+    goto non_app_lambda_term: 39
+state 35:  items:    body_lambda_term -> non_infix_lambda_term op . body_lambda_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto body_lambda_term: 36
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 36:  items:    body_lambda_term -> non_infix_lambda_term op body_lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'DOT' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'LPAREN' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'RPAREN' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'NEWLINE' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'LET' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'EOF' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'LANGLE' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'RANGLE' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'PAR' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'SEMICOLON' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'MID' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'ERROR' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'NEW' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'ASSIGN' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'NUM' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'OP' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'ID' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action 'error' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action '#' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+    action '$$' (noprec):   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term
+  immediate action:   reduce body_lambda_term --> non_infix_lambda_term op body_lambda_term  gotos:state 37:  items:    id_list -> 'ID' . id_list
+    id_list -> 'ID' . 
+  actions:    action 'LAMBDA' (noprec):   reduce id_list --> 'ID'
+    action 'DOT' (noprec):   reduce id_list --> 'ID'
+    action 'LPAREN' (noprec):   reduce id_list --> 'ID'
+    action 'RPAREN' (noprec):   reduce id_list --> 'ID'
+    action 'NEWLINE' (noprec):   reduce id_list --> 'ID'
+    action 'LET' (noprec):   reduce id_list --> 'ID'
+    action 'EOF' (noprec):   reduce id_list --> 'ID'
+    action 'LANGLE' (noprec):   reduce id_list --> 'ID'
+    action 'RANGLE' (noprec):   reduce id_list --> 'ID'
+    action 'PAR' (noprec):   reduce id_list --> 'ID'
+    action 'SEMICOLON' (noprec):   reduce id_list --> 'ID'
+    action 'COMMAND_SYM' (noprec):   reduce id_list --> 'ID'
+    action 'MID' (noprec):   reduce id_list --> 'ID'
+    action 'ERROR' (noprec):   reduce id_list --> 'ID'
+    action 'NEW' (noprec):   reduce id_list --> 'ID'
+    action 'ASSIGN' (noprec):   reduce id_list --> 'ID'
+    action 'NUM' (noprec):   reduce id_list --> 'ID'
+    action 'OP' (noprec):   reduce id_list --> 'ID'
+    action 'ID' (noprec):   shift 37
+    action 'error' (noprec):   reduce id_list --> 'ID'
+    action '#' (noprec):   reduce id_list --> 'ID'
+    action '$$' (noprec):   reduce id_list --> 'ID'
+  immediate action: <none>  gotos:    goto id_list: 38
+state 38:  items:    id_list -> 'ID' id_list . 
+  actions:    action 'LAMBDA' (noprec):   reduce id_list --> 'ID' id_list
+    action 'DOT' (noprec):   reduce id_list --> 'ID' id_list
+    action 'LPAREN' (noprec):   reduce id_list --> 'ID' id_list
+    action 'RPAREN' (noprec):   reduce id_list --> 'ID' id_list
+    action 'NEWLINE' (noprec):   reduce id_list --> 'ID' id_list
+    action 'LET' (noprec):   reduce id_list --> 'ID' id_list
+    action 'EOF' (noprec):   reduce id_list --> 'ID' id_list
+    action 'LANGLE' (noprec):   reduce id_list --> 'ID' id_list
+    action 'RANGLE' (noprec):   reduce id_list --> 'ID' id_list
+    action 'PAR' (noprec):   reduce id_list --> 'ID' id_list
+    action 'SEMICOLON' (noprec):   reduce id_list --> 'ID' id_list
+    action 'COMMAND_SYM' (noprec):   reduce id_list --> 'ID' id_list
+    action 'MID' (noprec):   reduce id_list --> 'ID' id_list
+    action 'ERROR' (noprec):   reduce id_list --> 'ID' id_list
+    action 'NEW' (noprec):   reduce id_list --> 'ID' id_list
+    action 'ASSIGN' (noprec):   reduce id_list --> 'ID' id_list
+    action 'NUM' (noprec):   reduce id_list --> 'ID' id_list
+    action 'OP' (noprec):   reduce id_list --> 'ID' id_list
+    action 'ID' (noprec):   reduce id_list --> 'ID' id_list
+    action 'error' (noprec):   reduce id_list --> 'ID' id_list
+    action '#' (noprec):   reduce id_list --> 'ID' id_list
+    action '$$' (noprec):   reduce id_list --> 'ID' id_list
+  immediate action:   reduce id_list --> 'ID' id_list  gotos:state 39:  items:    non_infix_lambda_term -> non_infix_lambda_term non_app_lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'DOT' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'LPAREN' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'RPAREN' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'NEWLINE' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'LET' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'EOF' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'LANGLE' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'RANGLE' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'PAR' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'SEMICOLON' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'MID' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'ERROR' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'NEW' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'ASSIGN' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'NUM' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'OP' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'ID' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action 'error' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action '#' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+    action '$$' (noprec):   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term
+  immediate action:   reduce non_infix_lambda_term --> non_infix_lambda_term non_app_lambda_term  gotos:state 40:  items:    non_infix_lambda_term -> non_app_lambda_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'DOT' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'LPAREN' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'RPAREN' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'NEWLINE' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'LET' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'EOF' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'LANGLE' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'RANGLE' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'PAR' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'SEMICOLON' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'COMMAND_SYM' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'MID' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'ERROR' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'NEW' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'ASSIGN' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'NUM' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'OP' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'ID' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action 'error' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action '#' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+    action '$$' (noprec):   reduce non_infix_lambda_term --> non_app_lambda_term
+  immediate action:   reduce non_infix_lambda_term --> non_app_lambda_term  gotos:state 41:  items:    non_app_lambda_term -> 'LPAREN' . lambda_term 'RPAREN'
+    non_app_lambda_term -> 'LPAREN' . op 'RPAREN'
+  actions:    action 'LAMBDA' (noprec):   shift 29
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 41
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   shift 16
+    action 'RANGLE' (noprec):   shift 17
+    action 'PAR' (noprec):   shift 13
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   shift 14
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   shift 15
+    action 'NUM' (noprec):   shift 47
+    action 'OP' (noprec):   shift 12
+    action 'ID' (noprec):   shift 46
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto op: 44
+    goto lambda_term: 42
+    goto body_lambda_term: 33
+    goto non_infix_lambda_term: 34
+    goto non_app_lambda_term: 40
+state 42:  items:    non_app_lambda_term -> 'LPAREN' lambda_term . 'RPAREN'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   shift 43
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 43:  items:    non_app_lambda_term -> 'LPAREN' lambda_term 'RPAREN' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'DOT' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'LPAREN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'RPAREN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'NEWLINE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'LET' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'EOF' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'LANGLE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'RANGLE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'PAR' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'SEMICOLON' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'COMMAND_SYM' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'MID' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'ERROR' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'NEW' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'ASSIGN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'NUM' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'OP' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'ID' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action 'error' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action '#' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+    action '$$' (noprec):   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'
+  immediate action:   reduce non_app_lambda_term --> 'LPAREN' lambda_term 'RPAREN'  gotos:state 44:  items:    non_app_lambda_term -> 'LPAREN' op . 'RPAREN'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   shift 45
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 45:  items:    non_app_lambda_term -> 'LPAREN' op 'RPAREN' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'DOT' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'LPAREN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'RPAREN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'NEWLINE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'LET' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'EOF' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'LANGLE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'RANGLE' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'PAR' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'SEMICOLON' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'COMMAND_SYM' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'MID' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'ERROR' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'NEW' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'ASSIGN' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'NUM' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'OP' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'ID' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action 'error' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action '#' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+    action '$$' (noprec):   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'
+  immediate action:   reduce non_app_lambda_term --> 'LPAREN' op 'RPAREN'  gotos:state 46:  items:    non_app_lambda_term -> 'ID' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'DOT' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'LPAREN' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'RPAREN' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'NEWLINE' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'LET' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'EOF' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'LANGLE' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'RANGLE' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'PAR' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'SEMICOLON' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'COMMAND_SYM' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'MID' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'ERROR' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'NEW' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'ASSIGN' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'NUM' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'OP' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'ID' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action 'error' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action '#' (noprec):   reduce non_app_lambda_term --> 'ID'
+    action '$$' (noprec):   reduce non_app_lambda_term --> 'ID'
+  immediate action:   reduce non_app_lambda_term --> 'ID'  gotos:state 47:  items:    non_app_lambda_term -> 'NUM' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'DOT' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'LPAREN' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'RPAREN' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'NEWLINE' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'LET' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'EOF' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'LANGLE' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'RANGLE' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'PAR' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'SEMICOLON' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'COMMAND_SYM' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'MID' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'ERROR' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'NEW' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'ASSIGN' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'NUM' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'OP' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'ID' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action 'error' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action '#' (noprec):   reduce non_app_lambda_term --> 'NUM'
+    action '$$' (noprec):   reduce non_app_lambda_term --> 'NUM'
+  immediate action:   reduce non_app_lambda_term --> 'NUM'  gotos:state 48:  items:    pi_term -> non_par_pi_term . 'PAR' pi_term
+    pi_term -> non_par_pi_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'DOT' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'LPAREN' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'RPAREN' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'NEWLINE' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'LET' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'EOF' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'LANGLE' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'RANGLE' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'PAR' (noprec):   shift 49
+    action 'SEMICOLON' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'COMMAND_SYM' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'MID' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'ERROR' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'NEW' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'ASSIGN' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'NUM' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'OP' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'ID' (noprec):   reduce pi_term --> non_par_pi_term
+    action 'error' (noprec):   reduce pi_term --> non_par_pi_term
+    action '#' (noprec):   reduce pi_term --> non_par_pi_term
+    action '$$' (noprec):   reduce pi_term --> non_par_pi_term
+  immediate action: <none>  gotos:state 49:  items:    pi_term -> non_par_pi_term 'PAR' . pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto pi_term: 50
+    goto non_par_pi_term: 48
+state 50:  items:    pi_term -> non_par_pi_term 'PAR' pi_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'DOT' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'LPAREN' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'RPAREN' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'NEWLINE' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'LET' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'EOF' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'LANGLE' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'RANGLE' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'PAR' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'SEMICOLON' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'COMMAND_SYM' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'MID' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'ERROR' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'NEW' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'ASSIGN' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'NUM' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'OP' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'ID' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action 'error' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action '#' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+    action '$$' (noprec):   reduce pi_term --> non_par_pi_term 'PAR' pi_term
+  immediate action:   reduce pi_term --> non_par_pi_term 'PAR' pi_term  gotos:state 51:  items:    non_par_pi_term -> 'LPAREN' . 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    non_par_pi_term -> 'LPAREN' . non_par_pi_term 'RPAREN'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   shift 52
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto non_par_pi_term: 69
+state 52:  items:    non_par_pi_term -> 'LPAREN' 'NEW' . 'ID' 'RPAREN' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 53
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 53:  items:    non_par_pi_term -> 'LPAREN' 'NEW' 'ID' . 'RPAREN' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   shift 54
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 54:  items:    non_par_pi_term -> 'LPAREN' 'NEW' 'ID' 'RPAREN' . 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   shift 55
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 55:  items:    non_par_pi_term -> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' . non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto non_par_pi_term: 56
+state 56:  items:    non_par_pi_term -> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'DOT' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LPAREN' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'RPAREN' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NEWLINE' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LET' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'EOF' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LANGLE' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'RANGLE' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'PAR' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'SEMICOLON' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'COMMAND_SYM' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'MID' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ERROR' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NEW' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ASSIGN' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NUM' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'OP' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ID' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'error' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action '#' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action '$$' (noprec):   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+  immediate action:   reduce non_par_pi_term --> 'LPAREN' 'NEW' 'ID' 'RPAREN' 'DOT' non_par_pi_term  gotos:state 57:  items:    non_par_pi_term -> 'ID' . 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    non_par_pi_term -> 'ID' . 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 58
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   shift 63
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 58:  items:    non_par_pi_term -> 'ID' 'LPAREN' . 'ID' 'RPAREN' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 59
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 59:  items:    non_par_pi_term -> 'ID' 'LPAREN' 'ID' . 'RPAREN' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   shift 60
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 60:  items:    non_par_pi_term -> 'ID' 'LPAREN' 'ID' 'RPAREN' . 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   shift 61
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 61:  items:    non_par_pi_term -> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' . non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto non_par_pi_term: 62
+state 62:  items:    non_par_pi_term -> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'DOT' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LPAREN' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'RPAREN' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NEWLINE' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LET' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'EOF' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'LANGLE' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'RANGLE' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'PAR' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'SEMICOLON' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'COMMAND_SYM' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'MID' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ERROR' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NEW' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ASSIGN' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'NUM' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'OP' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'ID' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action 'error' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action '#' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+    action '$$' (noprec):   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term
+  immediate action:   reduce non_par_pi_term --> 'ID' 'LPAREN' 'ID' 'RPAREN' 'DOT' non_par_pi_term  gotos:state 63:  items:    non_par_pi_term -> 'ID' 'LANGLE' . 'ID' 'RANGLE' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 64
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 64:  items:    non_par_pi_term -> 'ID' 'LANGLE' 'ID' . 'RANGLE' 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   shift 65
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 65:  items:    non_par_pi_term -> 'ID' 'LANGLE' 'ID' 'RANGLE' . 'DOT' non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   shift 66
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 66:  items:    non_par_pi_term -> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' . non_par_pi_term
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   shift 51
+    action 'RPAREN' (noprec):   error
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   shift 68
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto non_par_pi_term: 67
+state 67:  items:    non_par_pi_term -> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'DOT' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'LPAREN' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'RPAREN' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'NEWLINE' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'LET' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'EOF' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'LANGLE' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'RANGLE' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'PAR' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'SEMICOLON' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'COMMAND_SYM' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'MID' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'ERROR' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'NEW' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'ASSIGN' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'NUM' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'OP' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'ID' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action 'error' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action '#' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+    action '$$' (noprec):   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term
+  immediate action:   reduce non_par_pi_term --> 'ID' 'LANGLE' 'ID' 'RANGLE' 'DOT' non_par_pi_term  gotos:state 68:  items:    non_par_pi_term -> 'NUM' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'DOT' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'LPAREN' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'RPAREN' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'NEWLINE' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'LET' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'EOF' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'LANGLE' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'RANGLE' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'PAR' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'SEMICOLON' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'COMMAND_SYM' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'MID' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'ERROR' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'NEW' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'ASSIGN' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'NUM' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'OP' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'ID' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action 'error' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action '#' (noprec):   reduce non_par_pi_term --> 'NUM'
+    action '$$' (noprec):   reduce non_par_pi_term --> 'NUM'
+  immediate action:   reduce non_par_pi_term --> 'NUM'  gotos:state 69:  items:    non_par_pi_term -> 'LPAREN' non_par_pi_term . 'RPAREN'
+  actions:    action 'LAMBDA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'LPAREN' (noprec):   error
+    action 'RPAREN' (noprec):   shift 70
+    action 'NEWLINE' (noprec):   error
+    action 'LET' (noprec):   error
+    action 'EOF' (noprec):   error
+    action 'LANGLE' (noprec):   error
+    action 'RANGLE' (noprec):   error
+    action 'PAR' (noprec):   error
+    action 'SEMICOLON' (noprec):   error
+    action 'COMMAND_SYM' (noprec):   error
+    action 'MID' (noprec):   error
+    action 'ERROR' (noprec):   error
+    action 'NEW' (noprec):   error
+    action 'ASSIGN' (noprec):   error
+    action 'NUM' (noprec):   error
+    action 'OP' (noprec):   error
+    action 'ID' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:state 70:  items:    non_par_pi_term -> 'LPAREN' non_par_pi_term 'RPAREN' . 
+  actions:    action 'LAMBDA' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'DOT' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'LPAREN' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'RPAREN' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'NEWLINE' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'LET' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'EOF' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'LANGLE' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'RANGLE' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'PAR' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'SEMICOLON' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'COMMAND_SYM' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'MID' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'ERROR' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'NEW' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'ASSIGN' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'NUM' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'OP' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'ID' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action 'error' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action '#' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+    action '$$' (noprec):   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'
+  immediate action:   reduce non_par_pi_term --> 'LPAREN' non_par_pi_term 'RPAREN'  gotos:
+startStates = 0;2;4
+------------------------

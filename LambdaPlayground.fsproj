@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <OtherFlags>--mlcompatibility</OtherFlags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FsLexYacc" Version="10.2.0" />
+        <FsYacc Include="Parser.fsy">
+            <OtherFlags>--module Parser -v</OtherFlags>
+        </FsYacc>
+        <FsLex Include="Lexer.fsl">
+            <OtherFlags>--module Lexer --unicode</OtherFlags>
+        </FsLex>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Global.fs" />
+        <Compile Include="LambdaCalculus.fs" />
+        <Compile Include="PiCalculus.fs" />
+        <Compile Include="Lambda2PiConversion.fs" />
+        <Compile Include="ParserSupport.fs" />
+        <Compile Include="Parser.fsi" />
+        <Compile Include="Parser.fs" />
+        <Compile Include="Lexer.fs" />
+        <Compile Include="Analysis.ml" />
+        <Compile Include="Run.fs" />
+        <Compile Include="Test.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+</Project>
