@@ -285,7 +285,8 @@ expand: while reduction, expand all elements
 sim_step: in contrast to expand, try printing out the term in user-defined strings
 silent: silent mode, not printing out all strings
 file/f <file path>: load a file (in interactive mode) or execute a file (in argument)
-run <formula>: run a formula as command line and not triggering interactive mode"
+run <formula>: run a formula as command line and not triggering interactive mode
+result_only: display only the result, ignoring the process of computation"
 
 let rec commandAnalyser (commands : string list) : unit =
     // extract the first command
