@@ -125,11 +125,3 @@ let exp = \n m f x.m n f x
 -> (\f x.f x)
 = 1
 *)
-
-%eta contract
-1
-(*
-=> \f x.f x
-=> \f.f
-=> epsilon
-*)

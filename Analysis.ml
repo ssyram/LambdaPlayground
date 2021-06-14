@@ -51,6 +51,8 @@ module Flags = begin
         let mutable MAXIMUM_REDUCTION : uint64 option = Some 1000uL
         let mutable ETA_MODE = DoNothing
         let mutable RECURSIVE_VALUE_MODE = true
+        /// just display result, no process
+        let mutable RESULT_ONLY = false
         let mutable REDUCTION_METHOD = CallByValue
         /// have values:
         /// Some t => t : the term waiting for comparison
@@ -65,6 +67,16 @@ module Flags = begin
         let mutable SIMPLIFY_EVERY_STEP = true
     end
 end
+
+let printFreeVarWarning lt =
+    if Flags.LambdaOptions.SILENT_MODE |> not then
+        let freeVars = LambdaTerm.GetFreeVars lt in
+        if freeVars.IsEmpty |> not then
+            let s =
+                Set.map (fun s -> $"\"{s}\"") freeVars
+                |> String.concat ", "
+            in
+            printfn $"Warning: Contains Free Variables: {s}"
 
 let analyseStrWith str parseFunc =
     let lexbuf = LexBuffer<char>.FromString str in
@@ -123,8 +135,8 @@ let searchBindingByTerm (term : LambdaTerm<string>) =
 /// add a new binding, possibly replace the original ones
 /// returns message list, possibly to be printed
 let addBinding name term =
-    let fullTerm = LambdaTerm.ExpandOneLevel searchBindingByName term
-    in
+    let fullTerm = LambdaTerm.ExpandOneLevel searchBindingByName term in
+    let _ = printFreeVarWarning fullTerm in
     let msgLst =
         match nameTermBinding.[name] with
         | null ->
@@ -201,6 +213,7 @@ let lambdaReduction lt times =
 let lambdaAnalyser (lt : LambdaTerm<string>) : unit =
     // expand one level is enough for any definition will only have at most one level of var
     let lt = LambdaTerm.ExpandOneLevel searchBindingByName lt in
+    let _ = printFreeVarWarning lt in
     /// consider simplification, terms may get simplified with user-defined names
     /// this function encapsulates this process and returns the term that should be printed
     let getTermToPrint lt =
@@ -222,12 +235,14 @@ let lambdaAnalyser (lt : LambdaTerm<string>) : unit =
             FrameWork_LambdaReduction
                 (fun nlt' ->
                     nlt <- nlt';
-                    printfn $"{actualTime} : -> {getTermToPrint nlt'}";
+                    (if not Flags.LambdaOptions.RESULT_ONLY then
+                        printfn $"{actualTime} : -> {getTermToPrint nlt'}");
                     actualTime <- actualTime + 1uL)
                 lt times
         in
-        let _ = if isVal then printfn "-/->"
+        let _ = if isVal && not Flags.LambdaOptions.RESULT_ONLY then printfn "-/->"
         in
+        (if Flags.LambdaOptions.RESULT_ONLY then printfn $"{nlt} ");
         Option.iter (fun v -> printfn $"= {v}") $ findUserDefinedNameRepresentation nlt
     in
     let simplification () =
@@ -305,7 +320,10 @@ let rec commandAnalyser (commands : string list) : unit =
             Flags.LambdaOptions.SIMPLIFY_EVERY_STEP <- modifier true;
             recall lst
         | "mute" :: lst | "silent" :: lst ->
-            Flags.LambdaOptions.SILENT_MODE <- true;
+            Flags.LambdaOptions.SILENT_MODE <- modifier true;
+            recall lst
+        | ("result_only" | "only_result") :: lst ->
+            Flags.LambdaOptions.RESULT_ONLY <- modifier true;
             recall lst
         | x :: lst ->
             eprintfn $"Invalid command: \"%%{x}\"";
@@ -426,7 +444,12 @@ let AnalyseCommandLine args =
         try
             while true do
                 printf " - : ";
-                let input = Console.ReadLine () in
+                let mutable input = Console.ReadLine () in
+                let _ =
+                    while input.EndsWith '\\' do
+                        input <- input.[..(input.Length - 2)] + " " + Console.ReadLine ()
+                    done
+                in
                 try
                     lineAnalyser input
                 with
