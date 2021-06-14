@@ -7,8 +7,8 @@ let alphabet = (['a' - 'z'] | ['A' - 'Z'] | '_' | ''')
 let digit = ['0'-'9']
 let whitespace = [' ' '\t' ]
 let newline = ('\n' | '\r' '\n')
-let ops = ( '&' | '|' | '=' | '?' | '/' | '+' | '-' | '*' | '^' | '%' | '.' | '>' | '<' )
-let consOps = (ops | '~')
+let ops = ( '&' | '|' | '=' | '?' | '/' | '+' | '-' | '*' | '^' | '%' | '.' | '$' )
+let consOps = (ops | '~' | '>' | '<')
 
 rule token = parse
 | whitespace                            { token lexbuf }

@@ -338,6 +338,16 @@ let rec commandAnalyser (commands : string list) : unit =
         ->
         Flags.LambdaOptions.MAXIMUM_REDUCTION <- None;
         recall lst
+    | ("show_def" | "show" | "definitions") :: lst ->
+        for e in nameTermBinding do
+            let e = e :?> DictionaryEntry in
+            let name, term = e.Key :?> string, e.Value :?> LambdaTerm<string> in
+            if name.StartsWith '(' then
+                printfn $"let mid {name.[1..(name.Length - 2)]} = {term}"
+            else
+                printfn $"let {name} = {term}"
+        done;
+        recall lst
     | ("max_steps" | "ms" | "maximum_steps") :: num :: lst | ("maximum" | "max") :: ("steps" | "step") :: num :: lst
         -> begin
         try

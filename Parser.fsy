@@ -32,6 +32,7 @@ op :
     | ASSIGN                { $1 }
     | LANGLE                { "<" }
     | RANGLE                { ">" }
+    | DOT                   { "." }
 
 item :
     let_binding             { }
@@ -43,7 +44,7 @@ let_binding :
     { $2, $4 }
     | LET NUM ASSIGN lambda_term
     { $2, $4 }
-    | LET MID OP ASSIGN lambda_term
+    | LET MID op ASSIGN lambda_term
     { $"({$3})", $5 }
 
 lambda_term :
