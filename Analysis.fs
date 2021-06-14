@@ -326,6 +326,9 @@ let rec commandAnalyser (commands : string list) : unit =
         | ("result_only" | "only_result") :: lst ->
             Flags.LambdaOptions.RESULT_ONLY <- modifier true;
             recall lst
+        | "expand" :: lst ->
+            Flags.LambdaOptions.SIMPLIFY_EVERY_STEP <- modifier false;
+            recall lst
         | x :: lst ->
             eprintfn $"Invalid command: \"%%{x}\"";
             recall lst
@@ -369,9 +372,6 @@ let rec commandAnalyser (commands : string list) : unit =
         recall lst
     | "cbv" :: lst | "callbyvalue" :: lst | "call" :: "by" :: "value" :: lst | "call_by_value" :: lst ->
         Flags.LambdaOptions.REDUCTION_METHOD <- CallByValue;
-        recall lst
-    | "expand" :: lst ->
-        Flags.LambdaOptions.SIMPLIFY_EVERY_STEP <- false;
         recall lst
     | ("f" | "file") :: filePath :: lst ->
         (if Flags.IN_INTERACTIVE then fileAnalyser filePath
