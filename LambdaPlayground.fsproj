@@ -25,7 +25,7 @@
         <Compile Include="Parser.fsi" />
         <Compile Include="Parser.fs" />
         <Compile Include="Lexer.fs" />
-        <Compile Include="Analysis.ml" />
+        <Compile Include="Analysis.fs" />
         <Compile Include="Run.fs" />
         <Compile Include="Test.fs" />
         <Compile Include="Program.fs" />
