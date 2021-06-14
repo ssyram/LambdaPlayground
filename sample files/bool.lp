@@ -14,6 +14,12 @@ let mid ^ = xor
 let mid ?= = eq
 let mid -> = imply
 
+// a function used to work with enumerating True and False
+// p stands for a proposition waiting for enumerating
+// r stands for the relation between the enumerated propositions
+// f stands for the function to apply to the proposition been applied
+let enum = \r f p.r (f (p True)) (f (p False))
+
 let de_morgan = \x y.(~ (x && y)) ?= (~ x) || (~ y)
 
 %rv
