@@ -50,7 +50,7 @@ module Flags = begin
     module LambdaOptions = begin
         let mutable MAXIMUM_REDUCTION : uint64 option = Some 1000uL
         let mutable ETA_MODE = DoNothing
-        let mutable RECURSIVE_VALUE_MODE = true
+        let mutable RECURSIVE_VALUE_MODE = false
         /// just display result, no process
         let mutable RESULT_ONLY = false
         let mutable REDUCTION_METHOD = CallByValue
