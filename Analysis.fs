@@ -255,10 +255,11 @@ let lambdaAnalyser (lt : LambdaTerm<string>) : unit =
         | None ->
             Flags.LambdaOptions.TERM_FOR_COMPARISON <- Some $ LambdaTerm.ToDeBruijnWithFreeVars lt
         | Some t ->
-            if LambdaTerm.ToDeBruijnWithFreeVars lt = t then
+            (if LambdaTerm.ToDeBruijnWithFreeVars lt = t then
                 printfn "True"
             else
-                printfn "False"
+                printfn "False");
+            Flags.LambdaOptions.TERM_FOR_COMPARISON <- None
     in
     let modeChoice () =
         match Flags.LambdaOptions.OPERATION_MODE with
@@ -352,6 +353,7 @@ let rec commandAnalyser (commands : string list) : unit =
         done;
         recall lst
     | ("max_steps" | "ms" | "maximum_steps") :: num :: lst | ("maximum" | "max") :: ("steps" | "step") :: num :: lst
+        | "max" :: num :: lst
         -> begin
         try
             Flags.LambdaOptions.MAXIMUM_REDUCTION <- Some $ UInt64.Parse num
