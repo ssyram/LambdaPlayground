@@ -62,6 +62,7 @@ silent: silent mode, not printing out all strings
 file/f <file path>: load a file (in interactive mode) or execute a file (in argument)
 run <formula>: run a formula as command line and not triggering interactive mode
 result_only: display only the result, ignoring the process of computation
+red_cmp: perform reduction before comparison
 ```
 
 Also, some commands (those open or close modes) can have a prefix `not` to take their opposite meaning, like `%not rv`.

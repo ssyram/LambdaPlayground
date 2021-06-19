@@ -40,6 +40,7 @@ module Flags = begin
         | LTMReduction
         | LTMSimplify   // simplify to user define string
         | LTMComparison
+        | LTMRedComparison
     type RunType =
         | RunAString of string
         | RunAFile of string
@@ -250,22 +251,42 @@ let lambdaAnalyser (lt : LambdaTerm<string>) : unit =
         | Some lt -> printfn $"Simplified Term: {lt}"
         | None -> printfn "No Simplification Available."
     in
-    let comparison () =
+    /// red specifies whether first perform reduction before comparison
+    let comparison red =
         match Flags.LambdaOptions.TERM_FOR_COMPARISON with
         | None ->
-            Flags.LambdaOptions.TERM_FOR_COMPARISON <- Some $ LambdaTerm.ToDeBruijnWithFreeVars lt
+            Flags.LambdaOptions.TERM_FOR_COMPARISON <- Some $ lt
         | Some t ->
-            (if LambdaTerm.ToDeBruijnWithFreeVars lt = t then
+            let getFinalRes lt =
+                let mutable ret = lt in
+                FrameWork_LambdaReduction
+                    (fun nlt -> ret <- nlt)
+                    lt
+                    Flags.LambdaOptions.MAXIMUM_REDUCTION
+                |> ignore;
+                ret
+            in
+            let mutable lt = lt in
+            let mutable t = t in
+            if red then (
+                t <- getFinalRes t;
+                lt <- getFinalRes lt);
+            let dlt = LambdaTerm.ToDeBruijnWithFreeVars lt in
+            let dt = LambdaTerm.ToDeBruijnWithFreeVars t in
+            (if dlt = dt then
                 printfn "True"
-            else
-                printfn "False");
+            else begin
+                printfn "False";
+                printfn $"Comparing:\n{t}\nwith\n{lt}"
+            end);
             Flags.LambdaOptions.TERM_FOR_COMPARISON <- None
     in
     let modeChoice () =
         match Flags.LambdaOptions.OPERATION_MODE with
         | Flags.LTMReduction -> reduction Flags.LambdaOptions.MAXIMUM_REDUCTION
         | Flags.LTMSimplify -> simplification ()
-        | Flags.LTMComparison -> comparison ()
+        | Flags.LTMComparison -> comparison false
+        | Flags.LTMRedComparison -> comparison true
     in
     modeChoice ()
     
@@ -287,7 +308,8 @@ sim_step: in contrast to expand, try printing out the term in user-defined strin
 silent: silent mode, not printing out all strings
 file/f <file path>: load a file (in interactive mode) or execute a file (in argument)
 run <formula>: run a formula as command line and not triggering interactive mode
-result_only: display only the result, ignoring the process of computation"
+result_only: display only the result, ignoring the process of computation
+red_cmp: compare after reduction"
 
 let rec commandAnalyser (commands : string list) : unit =
     // extract the first command
@@ -388,6 +410,9 @@ let rec commandAnalyser (commands : string list) : unit =
             Flags.RUN_MODE <- Flags.RunAString formula)
         else lineAnalyser formula);
         recall lst
+    | ("red_comparison" | "cmp_red" | "reduction_comparison" | "red_cmp") :: lst ->
+        Flags.LambdaOptions.OPERATION_MODE <- Flags.LTMRedComparison;
+        recall lst
     | ("clear" | "c") :: lst ->
         nameTermBinding.Clear ();
         termNameBinding.Clear ();
@@ -454,9 +479,31 @@ let AnalyseCommandLine args =
     | Flags.RunInteractive ->
         Flags.IN_INTERACTIVE <- true;
         printfn "Interactive Mode, use %%exit or %%quit to exit, %%help to get more information";
+        let printPrompt () =
+            let promptStr =
+                if Flags.LambdaOptions.OPERATION_MODE = Flags.LTMRedComparison
+                    || Flags.LambdaOptions.OPERATION_MODE = Flags.LTMComparison then begin
+                    if Flags.LambdaOptions.TERM_FOR_COMPARISON <> None then
+                        Some "(2nd cmp term)"
+                    else
+                        Some "(1st cmp term)"
+                    end
+                else None
+            in
+            match promptStr with
+            | Some promptStr ->
+                printf $" - {promptStr} : "
+            | None ->
+                printf " - : "
+        in
         try
             while true do
-                printf " - : ";
+//                if Flags.LambdaOptions.OPERATION_MODE = Flags.LTMComparison
+//                 || Flags.LambdaOptions.OPERATION_MODE = 
+//                if Flags.LambdaOptions.TERM_FOR_COMPARISON <> None then
+//                    printfn " - (second) : "
+//                printf " - : ";
+                printPrompt ();
                 let mutable input = Console.ReadLine () in
                 let _ =
                     while input.EndsWith '\\' do
