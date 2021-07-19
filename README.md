@@ -33,7 +33,7 @@ This is, however, not a normal reduction for both call-by-value and call-by-name
 Note that the user-defined names are fundamentally and purly syntactic suger that the internal presentation is just a pure lambda term. Hence, recursive definition is not allowed.
 
 On the other hand, as this is just a simple demo, it is an undefined behavior if one tries to make use of the loop hole that free variables are allowed in RHS of definition to try recursive definitions.
-Also, it is not at all recommended to do that, as pure lambda calculus itself is Turing complete and techniques like Y-combinator is definitely a better choice.
+In fact, it is not at all recommended to do that, as techniques like Y-combinator are definitely better choices.
 
 ## Deployment
 
