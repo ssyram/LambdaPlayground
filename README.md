@@ -3,9 +3,9 @@
 
 ## Features
 
-This tool provides simple pure lambda calculus with call-by-name and call-by-value reduction. The aim of the this tool is for introducing pure lambda calculus and some well-known encoding with it, like Church encoding of natural numbers, and of Boolean.
+This tool provides presentation to simple pure lambda calculus with call-by-name and call-by-value reduction. The aim of the this tool is for introducing pure lambda calculus and some well-known encoding with it, like Church encodings of natural numbers, and of Boolean.
 
-To gain a better view of these encodings, this tool provides the feature of binding that one is able to give an English identifier name to lambda terms, then, afte rcomputation, one is able to see the result back in these names.
+To gain a better view of these encodings, this tool provides the feature of binding -- one is able to give an English identifier name or (to demostrate Church encodings of natural numbers) even numbers and other operators (with different syntax) to lambda terms, then, afte rcomputation, one is able to see the result back in these names.
 
 For example, we have Church encoding for numbers:
 
