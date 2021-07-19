@@ -12,7 +12,7 @@ For example, we have Church encoding for numbers:
 ```
 let 0 = \f x.x
 let 1 = \f x.f x
-let mid + = \n m f x.n f (m f x)  // "mid" is for define infix operator
+let mid + = \n m f x.n f (m f x)  // "mid" is for infix operator definition
 ```
 
 So we gain a computation process like:
